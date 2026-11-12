@@ -1,0 +1,8 @@
+project: savantenvs/libvirt
+target: fuzz_nodedev_xml
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_nodedev_xml/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_nodedev_xml
+    libfuzzer: true
